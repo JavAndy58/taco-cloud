@@ -3,7 +3,6 @@ package com.example.tacocloud.control;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
-
 import com.example.tacocloud.model.Ingredient;
 import com.example.tacocloud.model.Taco;
 import org.springframework.stereotype.Controller;
@@ -13,7 +12,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import lombok.extern.slf4j.Slf4j;
-
 import javax.validation.Valid;
 
 @Slf4j
