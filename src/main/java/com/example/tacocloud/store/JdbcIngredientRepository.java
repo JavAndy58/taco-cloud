@@ -2,7 +2,6 @@ package com.example.tacocloud.store;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
 import com.example.tacocloud.model.Ingredient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -21,14 +20,14 @@ public class JdbcIngredientRepository implements IngredientRepository {
     @Override
     public Iterable<Ingredient> findAll() {
         return jdbc.query("select id, name, type from Ingredient",
-        this::mapRowToIngredient);
+           this::mapRowToIngredient);
     }
 
     @Override
     public Ingredient findOne(String id) {
         return jdbc.queryForObject(
                 "select id, name, type from Ingredient where id=?",
-                this::mapRowToIngredient, id);
+                        this::mapRowToIngredient, id);
     }
 
     @Override
