@@ -1,9 +1,11 @@
-package com.example.tacocloud.store;
+package com.example.tacocloud.repository;
 
 import com.example.tacocloud.model.Ingredient;
 
+import java.util.Optional;
+
 public interface IngredientRepository {
     Iterable<Ingredient> findAll();
-    Ingredient findOne(String id);
+    Optional<Ingredient> findById(String id);
     Ingredient save(Ingredient ingredient);
 }
